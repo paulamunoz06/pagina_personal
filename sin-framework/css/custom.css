@@ -14,7 +14,7 @@ header {
     align-items: center;
 }
 
-.container  {
+.container {
     height: calc(100vh - 80px - 60px);
     width: 100vw;
     background-color: red;
@@ -25,7 +25,7 @@ header {
 }
 
 .home {
-    height: 50%;
+    height: 390px;
     width: 50%;
     background-color: green;
 
@@ -33,17 +33,39 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+.letras {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.letras div {
+    
+    font-size: 11rem;
+    line-height: 1;
+    
+    font-weight: 900;
+    letter-spacing: -10px;
+    color: #111;
+
+    display: inline-block;
 }
 
 .opciones-home {
     background-color: yellow;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-footer  {
+footer {
     height: 60px;
     width: 100vw;
     background-color: yellow;

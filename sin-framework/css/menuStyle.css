@@ -1,0 +1,81 @@
+#icono-menu {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+    background-color: red;
+}
+
+#icono-menu span {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #111;
+
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(.3, .9, .3, .9);
+}
+
+/* Posiciones iniciales */
+.circle-left-top {
+    top: 7px;
+    left: 7px;
+}
+
+.circle-right-top {
+    top: 7px;
+    right: 7px;
+}
+
+.circle-left-bottom {
+    bottom: 7px;
+    left: 7px;
+}
+
+.circle-right-bottom {
+    bottom: 7px;
+    right: 7px;
+}
+
+/* Animación con el Hover */
+#icono-menu:hover .circle-left-top {
+    transition-delay: 0.025s;
+    transform: translate(142%, 142%);
+}
+
+#icono-menu:hover .circle-right-top {
+    transition-delay: 0.05s;
+    transform: translate(-142%, 142%);
+}
+
+#icono-menu:hover .circle-left-bottom {
+    transition-delay: 0s;
+    transform: translate(142%, -142%);
+}
+
+#icono-menu:hover .circle-right-bottom {
+    transition-delay: 0.075s;
+    transform: translate(-142%, -142%);
+}
+
+/* Animación cuando se quita el Hover */
+#icono-menu:not(:hover) .circle-left-top {
+    transition-delay: 0.075s;
+    transform: translate(0, 0);
+}
+
+#icono-menu:not(:hover) .circle-right-top {
+    transition-delay: 0.05s;
+    transform: translate(0, 0);
+}
+
+#icono-menu:not(:hover) .circle-left-bottom {
+    transition-delay: 0s;
+    transform: translate(0, 0);
+}
+
+#icono-menu:not(:hover) .circle-right-bottom {
+    transition-delay: 0.075s;
+    transform: translate(0, 0);
+}
