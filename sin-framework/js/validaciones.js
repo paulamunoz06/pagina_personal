@@ -209,8 +209,6 @@ function validarCamposAlCambiarFoco() {
         }   
     });
 
-    //inputs.preferencia.forEach(input => input.addEventListener('change', () => validarFormaContacto(inputs.preferencia, errores.preferencia, 'La preferencia de contacto es obligatoria')));
-
     // Validar categoría al perder foco
     Array.from(inputs.preferencia).forEach(input => input.addEventListener('blur', () => validarFormaContacto(inputs.preferencia, errores.preferencia, 'La categoría es obligatoria')));
 }
