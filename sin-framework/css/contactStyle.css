@@ -60,14 +60,59 @@ header {
     background-color: antiquewhite;
 }
 
-.form-contact{
+#formularioContacto{
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-item{
     background-color: blue;
+    width: 100%;
+    height: 50px;
+}
+
+.form-item input{
+    border: 2px solid black;
+    width: 70%;
+    height: 100%;
+    border-radius: 0 22px 22px;
+    padding: 1rem 1rem 0;
+    background-color: rgba(255, 251, 238, .5);
+}
+
+.form-label{
+    margin: .25rem 0 0 .5rem;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .send-contact{
     width: 50%;
     height: 100%;
     background-color: brown;
+}
+
+#btnRegistrar{
+  color: var(--fondo);
+  background-color: var(--morado);
+  border: 0px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 2px solid var(--morado) !important;
+  box-shadow: 0 0 5px var(--morado) !important;
+  outline: none;
+}
+
+.is-valid {
+  border: 2px solid #28a745 !important;
+  background-color: #f0fff4;
+}
+
+.is-invalid {
+  border: 2px solid #dc3545 !important;
+  background-color: #fff5f5;
 }

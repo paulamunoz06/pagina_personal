@@ -150,7 +150,7 @@ function validarFormulario() {
     // Si todas las validaciones son correctas
     if (idObligatorio && idValido && correoObligatorio && telefonoObligatorio && motivoContactoObligatorio && nombresValidos && apellidosValidos && correoValido && telefonoValido && motivoContactoValido && mensajeValido && aceptaTerminosValido && preferenciaContactoObligatorio) {
         // Mostrar mensaje de éxito
-        mostrarMensajeExito();
+       alert('todocorrecto');
 
         // Resetear el formulario después de un tiempo
         setTimeout(() => {
