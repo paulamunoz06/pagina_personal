@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/menuStyle.css">
+    <link rel="stylesheet" href="css/contactStyle.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <p>LOGO</p>
+        </div>
+        <div id="icono-menu">
+            <span class="circle-left-top"></span>
+            <span class="circle-right-top"></span>
+            <span class="circle-left-bottom"></span>
+            <span class="circle-right-bottom"></span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container-body">
+            <div id="header-contact">
+                <div class="header-text">Contactáme</div>
+                <div class="header-divide"></div>
+            </div>
+            <div class="body-contact">
+                <div class="form-contact">
+                    <form id="formularioContacto" onsubmit="return validarFormulario()">
+                        <div class="mb-0">
+                            <label for="nombres" class="form-label">Nombres:</label>
+                            <input type="text" id="nombres" name="nombres" class="form-control" placeholder="Nombres del usuario">
+                            <label class="text-danger form-text" id="errorNombres"></label><br>
+                        </div>    
+                        
+                        <div class="mb-0">
+                            <label for="apellidos" class="form-label">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Apellidos del usuario" >
+                            <label class="text-danger form-text" id="errorApellidos"></label><br>
+                        </div>    
+                        
+                        <div class="mb-0">
+                            <label for="correo-electronico" class="form-label">Correo Electrónico:</label>
+                            <input type="email" id="correo-electronico" name="correo-electronico" class="form-control" placeholder="correo@ejemplo.com" >
+                            <label class="text-danger form-text" id="errorCorreo"></label><br>
+                        </div>    
+                        
+                        <div class="mb-0">
+                            <label for="nombre-producto" class="form-label">Nombre del producto:</label>
+                            <input type="text" id="nombre-producto" name="nombre-producto" class="form-control" placeholder="Nombre del producto">
+                            <label class="text-danger form-text" id="errorNombreProducto"></label><br>
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="descripcion-producto" class="form-label">Descripción el producto:</label>
+                            <textarea id="descripcion-producto" name="descripcion-producto" class="form-control" placeholder="Describe el producto"rows="4"></textarea>
+                            <label class="text-danger form-text" id="errorDescripcionProducto"></label><br>
+                        </div> 
+
+                        <fieldset class="mb-5" id="fieldset-categorias">
+                            <label class="form-label">Categoría:</label>
+                            <label class="text-danger form-text" id="errorCategoria"></label><br>
+                        </fieldset>
+                        
+                        <div class="d-flex justify-content-start">
+                            <button type="submit" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="send-contact">
+                    <p>boton</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
