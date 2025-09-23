@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    cursor: none;
 }
 
 header {
@@ -17,7 +18,6 @@ header {
 .container {
     height: calc(100vh - 80px - 60px);
     width: 100vw;
-    background-color: red;
 
     display: flex;
     justify-content: center;
