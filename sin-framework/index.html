@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/menuStyle.css">
     <link rel="stylesheet" href="css/cursorStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor border"></div>
+    <div class="cursor-inner"></div>
     <header>
         <div id="logo">
             <p>LOGO</p>
@@ -23,7 +30,49 @@
             <span class="circle-right-bottom"></span>
         </div>
     </header>
-    <div class="container">
+    <nav id="menu" class="container-menu">
+        <div class="container-opciones">
+            <div class="container-opcion">
+                <div class="opcion">
+                    <img src="" alt="">
+                    <span class="opcion-text">Inicio</span>
+                </div>
+            </div>
+            <div class="container-opcion">
+                <div class="opcion">
+                    <img src="" alt="">
+                    <span class="opcion-text">Trabajos</span>
+                </div>
+            </div>
+            <div class="container-opcion">
+                <div class="opcion">
+                    <img src="" alt="">
+                    <span class="opcion-text">Sobre Mí</span>
+                </div>
+
+            </div>
+            <div class="container-opcion">
+                <div class="opcion">
+                    <img src="" alt="">
+                    <span class="opcion-text">Contáctame</span>
+                </div>
+
+            </div>
+            <div class="container-redes">
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <span class="text-small nav-details visible">Diseñado &amp; Desarrollado por Diego Pérez y Paula Muñoz</span>
+            <span class="text-small nav-details visible">
+                © 
+                2025
+            </span>
+        </div>
+    </nav>
+    <div id="home" class="container-home">
         <div class="home">
             <div class="letras letras-top">
                 <div>J</div>
@@ -47,11 +96,8 @@
     <footer>
         <p>Tecnologias</p>
     </footer>
-
-    <div class="cursor dot"></div>
-    <div class="cursor border"></div>
-    <div class="cursor inner"></div>
     <script src="js/animaciones/cursorAnimacion.js"></script>
+    <script src="js/funcionalidades/menuFuncionalidad.js"></script>
 </body>
 
 </html>
