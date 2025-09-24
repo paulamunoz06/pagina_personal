@@ -27,6 +27,7 @@
     position: fixed;
     background-color: rgba(25, 25, 25, .2);
     pointer-events: none;
+    z-index: 9999;
 }
 
 /* Efecto hover */
