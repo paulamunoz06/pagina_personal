@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Portafolio | Contacto</title>
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/cursorStyle.css">
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
@@ -83,28 +83,100 @@
             </span>
         </div>
     </nav>
-    <div id="inicio" class="container-inicio">
-        <section class="section-home">
-            <div class="content-home">
-                <div class="letras letras-top">
-                    <div>D</div>
-                    <div>I</div>
-                    <div>E</div>
-                    <div>G</div>
-                    <div>O</div>
+    <div id="contacto" class="container-contacto">
+        <section class="section-contacto">
+            <div class="content-contacto">
+                <div class="header-contact">
+                    <h1 class="header-contact-text">Contáctame</h1>
+                    <div class="header-divider"></div>
                 </div>
-                <div class="letras letras-bottom">
-                    <div>P</div>
-                    <div>A</div>
-                    <div>U</div>
-                    <div>L</div>
-                    <div>A</div>
-                </div>
-                <div class="opciones-home">
-                    <div>Mis Trabajos</div>
-                    <div>Contactame</div>
+                <div class="body-contact">
+                    <div class="input-contact">
+                        <form class="formulario" id="formularioContacto" onsubmit="return validarFormulario()">
+                            <div class="form-content">
+                                <div class="form-container-item">
+                                    <label for="id-contacto" class="form-label">Identificación</label>
+                                    <input type="text" id="id-contacto" name="id-contacto" class="form-control"
+                                        placeholder="...">
+                                    <label class="text-danger form-text" id="errorIdContacto"></label>
+                                </div>
+
+                                <div class="form-container-item">
+                                    <label for="nombres" class="form-label">Nombres</label>
+                                    <input type="text" id="nombres" name="nombres" class="form-control"
+                                        placeholder="...">
+                                    <label class="text-danger form-text" id="errorNombres"></label>
+                                </div>
+
+                                <div class="form-container-item">
+                                    <label for="correo-electronico" class="form-label">Correo Electrónico</label>
+                                    <input type="email" id="correo-electronico" name="correo-electronico"
+                                        class="form-control" placeholder="correo@ejemplo.com">
+                                    <label class="text-danger form-text" id="errorCorreo"></label>
+                                </div>
+
+                                <div class="form-container-item">
+                                    <label for="telefono" class="form-label">Telefono</label>
+                                    <input type="tel" id="telefono" name="telefono" class="form-control"
+                                        placeholder="...">
+                                    <label class="text-danger form-text" id="errorTelefono"></label>
+                                </div>
+
+                                <div class="form-container-item form-select-motivo">
+                                    <label for="motivo-contacto" class="form-label">Motivo de contacto</label>
+                                    <select id="motivo-contacto" class="form-select" name="motivo-contacto">
+                                        <option value="soporte">Soporte técnico</option>
+                                        <option value="consulta">Consulta general</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                    </select>
+                                    <label class="text-danger form-text" id="errorMotivoContacto"></label>
+                                </div>
+
+                                <div class="form-container-item form-textarea">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" class="form-control"
+                                        placeholder="..."></textarea>
+                                    <label class="text-danger form-text" id="errorMensaje"></label>
+                                </div>
+
+
+                                <div class="form-radio">
+                                    <label class="form-label">Preferencia de contacto</label>
+                                    <fieldset>
+                                        <div class="form-radio-opciones">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="email"
+                                                    name="preferencia-contacto" value="email">
+                                                <label class="form-check-label" for="email">Email</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="celular"
+                                                    name="preferencia-contacto" value="celular">
+                                                <label class="form-check-label" for="celular">Teléfono</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <label class="text-danger form-text" id="errorPreferenciaContacto"></label>
+                                </div>
+
+                                <div class="form-checkbox col-12 col-md-6 mt-4 mb-5">
+                                    <input type="checkbox" id="acepta-terminos" name="acepta-terminos">
+                                    <label for="acepta-terminos">Acepto los términos y condiciones</label>
+                                    <label class="text-danger form-text" id="errorAceptaTerminos"></label>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="container-boton container-fluid d-flex justify-content-center align-items-center">
+                        <button type="submit" id="btnRegistrar" class="btn btn-success " form="formularioContacto">
+                            <div class="triangulo"></div>
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </section>
         <section class="section-about">
             <div class="content-about">
@@ -112,14 +184,14 @@
                     <input id="slide1" type="radio" name="group" checked>
                     <input id="slide2" type="radio" name="group">
                     <label class="previo" for="slide1">
-                            <span class="material-symbols-outlined">
-                                arrow_back
-                            </span>
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
                     </label>
                     <label class="siguiente" for="slide2">
-                            <span class="material-symbols-outlined">
-                                arrow_forward
-                            </span>
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
                     </label>
                     <div class="slider">
                         <div class="slide slide1" for="slide1">
@@ -179,10 +251,8 @@
             </div>
         </section>
     </div>
-    <footer>
-        <p>Tecnologias</p>
-    </footer>
     <script src="js/animaciones/cursorAnimacion.js"></script>
     <script src="js/funcionalidades/menuFuncionalidad.js"></script>
 </body>
+
 </html>
