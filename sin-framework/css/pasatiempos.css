@@ -23,7 +23,7 @@ body {
   z-index: -1;
 }
 
-#inicio {
+#pasatiempos {
     position: relative;
     height: 200vh;
     width: 100%;
@@ -41,7 +41,7 @@ section {
 /*------------------------------------*/
 /*Inicio Section About Estilos*/
 
-.content-about {
+.content-pasatiempos {
     height: 390px;
     width: 85%;
 
@@ -70,7 +70,7 @@ section {
     margin: 0 0 0.5rem;
 }
 
-.header-divider {
+.header-pasatiempos .header-divider {
     background-color: rgb(29, 29, 29);
     height: 4px;
     border-radius: 2px 0 4px 2px;
@@ -132,6 +132,7 @@ section {
 }
 
 .carrusel .slider .slide {
+    background-color: rgb(255,251,238);
     position: absolute;
     top: 0;
     left: 0;
@@ -140,7 +141,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(100px);
 }
 
 .carrusel .slider .slide1 {

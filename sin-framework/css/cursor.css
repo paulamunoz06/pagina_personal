@@ -6,7 +6,7 @@
     position: fixed;
     pointer-events: none;
     background-color: transparent;
-    transition: background-color 0.5s, width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
     z-index: 1000;
 }
 
@@ -36,10 +36,17 @@
     width: 50px;
     border: none;
     background-color: rgba(25, 25, 25, .2);
-    
     pointer-events: none;
 }
 
-.cursor-dot.active, .cursor-inner.active {
+.cursor-dot.active,
+.cursor-inner.active {
     display: none;
+}
+
+/* Efecto hover proyectos */
+.cursor-follower.tooltip-visible {
+    width: 0px;
+    height: 0px;
+    background-color: rgba(var(--text-rgb) 25, 25, 25, 0);
 }

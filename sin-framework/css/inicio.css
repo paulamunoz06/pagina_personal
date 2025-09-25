@@ -149,6 +149,7 @@ section {
 }
 
 .carrusel .slider .slide {
+    background-color: rgb(255,251,238);
     position: absolute;
     top: 0;
     left: 0;
@@ -157,7 +158,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(100px);
 }
 
 .carrusel .slider .slide1 {
