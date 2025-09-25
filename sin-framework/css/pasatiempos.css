@@ -38,48 +38,6 @@ section {
     align-items: center;
 }
 
-/*Inicio Section Home Estilos*/
-.content-home {
-    height: 390px;
-    width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.letras {
-    height: 100%;
-    width: 100%;
-
-    text-align: center;
-    overflow: hidden;
-}
-
-.letras div {
-    font-size: 11rem;
-    line-height: 1;
-
-    font-weight: 900;
-    letter-spacing: -6px;
-
-    display: inline-block;
-}
-
-.letras-bottom div {
-    color: rgb(255, 102, 99);
-}
-
-.opciones-home {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/*Fin Section Home Estilos*/
 /*------------------------------------*/
 /*Inicio Section About Estilos*/
 
@@ -92,6 +50,31 @@ section {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.header-pasatiempos {
+    width: 100%;
+}
+
+.header-pasatiempos-container-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-pasatiempos-text {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    font-size: 2.6rem;
+    margin: 0 0 0.5rem;
+}
+
+.header-divider {
+    background-color: rgb(29, 29, 29);
+    height: 4px;
+    border-radius: 2px 0 4px 2px;
+    margin-bottom: 1.5rem;
 }
 
 /*Inicio Carrusel Estilos*/
@@ -181,9 +164,6 @@ section {
     clip-path: circle(100% at 50% 50%);
     transition-delay: 1s;
 }
-
-
-
 /*Fin Carrusel Estilos*/
 
 /*Inicio contenido de cada slide estilos */
