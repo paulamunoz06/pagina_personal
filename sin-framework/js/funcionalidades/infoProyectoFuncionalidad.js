@@ -1,12 +1,22 @@
+// Selecciona todos los elementos con la clase 'proyectos'
 const proyectos = document.querySelectorAll('.proyectos');
+
+// Selecciona el contenedor de la tarjeta de información del proyecto
 const card = document.querySelector('#card-info-proyecto');
+
+// Selecciona el botón de cerrar la tarjeta
 const btnClose = document.querySelector('#btn-close-card');
 
-
+// Selecciona el campo donde se mostrará el nombre del proyecto
 const campoNombre = document.querySelector('#card-titulo');
+
+// Selecciona el campo donde se mostrará la descripción del proyecto
 const campoDescripcion = document.querySelector('.proyecto-descripcion');
+
+// Selecciona el contenedor donde se mostrarán las tecnologías del proyecto
 const campoTecnologias = document.querySelector('.proyecto-tecnologias');
 
+// Array con la información de los proyectos (nombre, descripción y tecnologías)
 const infoProyectos = [
     {
         nombre: "Portafolio",
@@ -20,7 +30,7 @@ const infoProyectos = [
     },
     {
         nombre: "Spartan Box",
-        descripcion: "Descripcion spartan box dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
+        descripcion: "Se desarrolló una aplicación de gestión para el gimnasio Spartan Box con el objetivo de optimizar la administración de clientes, entrenadores y planes de entrenamiento, mejorando la eficiencia operativa y la experiencia del usuario.",
         tecnologias: ["HTML", "CSS", "C#", "ASP.Net"]
     },
     {
@@ -30,20 +40,34 @@ const infoProyectos = [
     }
 ];
 
+// Recorre todos los elementos con clase 'proyectos'
 proyectos.forEach((proyecto, index) => {
+    // Agrega un evento 'click' a cada proyecto
     proyecto.addEventListener("click", () => {
+        // Obtiene la información correspondiente al proyecto clicado
         let informacion = infoProyectos[index];
+
+        // Inserta el nombre del proyecto en el campo correspondiente
         campoNombre.innerText = `${informacion.nombre}`;
+
+        // Inserta la descripción del proyecto
         campoDescripcion.innerText = `${informacion.descripcion}`;
+
+        // Limpia el contenedor de tecnologías
         campoTecnologias.innerHTML = "";
+
+        // Recorre el array de tecnologías y las inserta como elementos <div>
         informacion.tecnologias.forEach(tecnologia => {
             campoTecnologias.innerHTML += `<div>${tecnologia}</div>`
         });
+
+        // Muestra la tarjeta añadiendo la clase 'activade'
         card.classList.add("activade");
     });
 });
 
-
+// Evento para el botón de cerrar la tarjeta
 btnClose.addEventListener("click", () => {
+    // Oculta la tarjeta quitando la clase 'activade'
     card.classList.remove("activade");
 });
