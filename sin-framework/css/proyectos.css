@@ -100,6 +100,10 @@ ul {
     cursor: pointer !important;
 }
 
+.proyecto-titulo svg path{
+    cursor: pointer !important;
+}
+
 .proyecto-titulo h2 {
     font-size: 1.5rem;
     margin: .5rem 0;

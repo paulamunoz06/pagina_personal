@@ -24,8 +24,8 @@ const infoProyectos = [
         tecnologias: ["HTML", "CSS", "C#", "ASP.Net"]
     },
     {
-        nombre: "Manage Fit",
-        descripcion: "Descripcion manage fit dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
+        nombre: "Manage Soft",
+        descripcion: "Descripcion manage soft dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
         tecnologias: ["Java", "Spring Boot", "Docker", "MySql", "RabbitMQ", "KeyCloak"]
     }
 ];
@@ -33,7 +33,7 @@ const infoProyectos = [
 
 proyectos.forEach((proyecto, index) => {
     proyecto.addEventListener("click", () => {
-        informacion = infoProyectos[index]; 
+        let informacion = infoProyectos[index];
         campoNombre.innerText = `${informacion.nombre}`;
         campoDescripcion.innerText = `${informacion.descripcion}`;
         campoTecnologias.innerHTML = "";

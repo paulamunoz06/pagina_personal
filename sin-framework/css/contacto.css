@@ -141,29 +141,23 @@ section {
     font-size: 14px;
 }
 
-.form-radio fieldset{
-    border: 2px solid rgb(29, 29, 29);
-    width: 100%;
-    height: 45px;
-    border-radius: 0 10px 10px 20px;
-    padding: 1.2rem 1rem 0;
-    background-color: rgba(255, 251, 238, .5);
-    font-size: 13px;
+.form-radio {
+    width: 50%;
+    grid-column: 1 / -1;
+}
+
+fieldset {
+    border: none;
 }
 
 .form-radio-opciones {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .form-checkbox {
-    position: relative;
-    left: 50%;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -221,4 +215,51 @@ select:focus {
 
 #btnRegistrar:hover {
     transform: scale(1.2);
+}
+
+.tabla-contact {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tabla-contact thead {
+    font-size: 1.2rem;
+    background-color: rgb(29, 29, 29);
+}
+
+.tabla-contact th,
+.tabla-contact td {
+    border: 3px solid rgb(29, 29, 29);
+    padding: 5px 10px;
+}
+
+.tabla-contact th {
+    border-right-color: rgb(255, 251, 238);
+    color: rgb(255, 251, 238);
+}
+
+.tabla-contact th:last-child {
+    border-right-color: rgb(29, 29, 29);
+}
+
+.btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    margin: 0.5rem;
+    cursor:  pointer !important;
+}
+
+.btn-editar {
+    color: rgb(29, 29, 29);
+    background-color: #ffc107;
+}
+
+.btn-eliminar {
+    color: rgb(255, 251, 238);
+    background-color: #dc3545;
 }

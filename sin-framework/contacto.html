@@ -127,7 +127,26 @@
                                     <label class="text-danger form-text" id="errorMensaje"></label>
                                 </div>
 
-                                <div class="form-checkbox col-12 col-md-6 mt-4 mb-5">
+                                <div class="form-radio">
+                                    <label class="form-peferencia-label">Preferencia de contacto</label>
+                                    <fieldset>
+                                        <div class="form-radio-opciones">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="email"
+                                                    name="preferencia-contacto" value="email">
+                                                <label class="form-check-label" for="email">Email</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="llamada"
+                                                    name="preferencia-contacto" value="llamada">
+                                                <label class="form-check-label" for="llamada">Llamada</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <label class="text-danger form-text" id="errorPreferenciaContacto"></label>
+                                </div>
+
+                                <div class="form-checkbox">
                                     <input type="checkbox" id="acepta-terminos" name="acepta-terminos">
                                     <label for="acepta-terminos">Acepto los términos y condiciones</label>
                                     <label class="text-danger form-text" id="errorAceptaTerminos"></label>
@@ -144,74 +163,49 @@
             </div>
 
         </section>
-        <section class="section-about">
-            <div class="content-about">
-                <div class="carrusel">
-                    <input id="slide1" type="radio" name="group" checked>
-                    <input id="slide2" type="radio" name="group">
-                    <label class="previo" for="slide1">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
-                    </label>
-                    <label class="siguiente" for="slide2">
-                        <span class="material-symbols-outlined">
-                            arrow_forward
-                        </span>
-                    </label>
-                    <div class="slider">
-                        <div class="slide slide1" for="slide1">
-                            <div class="content-slide">
-                                <div class="about-img img-diego"></div>
-                                <div class="about-info info-diego">
-                                    <div class="info-header">
-                                        <p class="info-header-text">
-                                            Sobre Mí
-                                        </p>
-                                        <div class="header-divider"></div>
-                                    </div>
-                                    <div class="info-body">
-                                        <p class="info-body-text">
-                                            Diego dolor sit amet consectetur adipisicing elit. Autem fugit totam quaerat
-                                            aperiam laboriosam. Quae porro provident suscipit, repellendus delectus
-                                            beatae
-                                            explicabo et vitae, aspernatur cupiditate assumenda nisi autem error?
-                                        </p>
-                                    </div>
-                                    <div class="info-nacimiento">
-                                        <p class="info-nacimiento-text">
-                                            27/12/2005
-                                        </p>
-                                    </div>
-                                </div>
+        <section class="section-crud">
+            <div class="content-crud">
+                <div class="content-tabla-contacts">
+                    <div class="tabla-contacts">
+                        <div class="header-contact">
+                            <div class="header-contact-container-text">
+                                <div class="header-contact-text">Contactos</div>
                             </div>
+                            <div class="header-divider"></div>
                         </div>
-                        <div class="slide slide2" for="slide2">
-                            <div class="content-slide">
-                                <div class="about-img img-paula"></div>
-                                <div class="about-info info-paula">
-                                    <div class="info-header">
-                                        <p class="info-header-text">
-                                            Sobre Mí
-                                        </p>
-                                        <div class="header-divider"></div>
-                                    </div>
-                                    <div class="info-body">
-                                        <p class="info-body-text">
-                                            Paula dolor sit amet consectetur adipisicing elit. Autem fugit totam quaerat
-                                            aperiam laboriosam. Quae porro provident suscipit, repellendus delectus
-                                            beatae
-                                            explicabo et vitae, aspernatur cupiditate assumenda nisi autem error?
-                                        </p>
-                                    </div>
-                                    <div class="info-nacimiento">
-                                        <p class="info-nacimiento-text">
-                                            06/07/2004
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <table class="tabla-contact">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Teléfono</th>
+                                    <th>Motivo</th>
+                                    <th>Mensaje</th>
+                                    <th>Preferencia</th>
+                                    <th>Fecha Creación</th>
+                                    <th>Fecha actualización</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>juan</td>
+                                    <td>juanperezdz@gmail.com</td>
+                                    <td>3164171685</td>
+                                    <td>soporte técnico</td>
+                                    <td>tuve un problema muy grave con mi computador</td>
+                                    <td>teléfono</td>
+                                    <td>05/07/20205</td>
+                                    <td>25/09/20205</td>
+                                    <td>
+                                        <button class="btn btn-editar">Editar</button>
+                                        <button class="btn btn-eliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

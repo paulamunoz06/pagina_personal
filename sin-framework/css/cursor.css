@@ -44,9 +44,56 @@
     display: none;
 }
 
+.cursor.tooltip-active, .cursor-dot.tooltip-active {
+    display: none;
+}
+
+.cursor-inner.tooltip-active {
+    height: 0;
+    width: 0;
+}
+
 /* Efecto hover proyectos */
-.cursor-follower.tooltip-visible {
-    width: 0px;
-    height: 0px;
-    background-color: rgba(var(--text-rgb) 25, 25, 25, 0);
+.tooltip {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(16px, 16px) scale(0);
+    background-color: rgb(25, 25, 25);
+    padding: 6px 12px;
+    border-radius: 20px;
+    transform-origin: left top;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    transition: opacity 0.2s, transform 0.2s, background-color 0.4s, box-shadow 0.4s;
+}
+
+.tooltip.active {
+    opacity: 1;
+    transform: translate(16px, 16px) scale(1);
+}
+
+.tooltip .tooltip-descripcion {
+    font-size: 1.2rem;
+    color: rgb(255, 251, 238);
+}
+
+.tooltip.image {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 6px;
+}
+
+.tooltip.image img {
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px #0003;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.tooltip.image span {
+    min-width: 180px;
 }

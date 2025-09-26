@@ -4,7 +4,7 @@ header {
     left: 0;
     height: 80px;
     width: 100%;
-    padding: 0 5%;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,7 @@ header {
     width: 48px;
     height: 48px;
     position: relative;
+    cursor: pointer !important;
 }
 
 #icono-menu span {
@@ -28,6 +29,7 @@ header {
 
     transform-origin: center;
     transition: transform 0.5s cubic-bezier(.3, .9, .3, .9);
+    cursor: pointer !important;
 }
 
 /* Posiciones iniciales */
