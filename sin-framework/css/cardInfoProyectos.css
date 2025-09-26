@@ -40,7 +40,13 @@
     align-items: center;
     opacity: 0.5;
     transition: transform 0.2s;
+    cursor: pointer !important;
 }
+
+.header-container-proyectos .header-close-icon svg,  .header-container-proyectos .header-close-icon svg path{
+    cursor: pointer !important;
+}
+
 
 .header-container-proyectos .header-close-icon:hover {
     opacity: 1;

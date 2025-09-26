@@ -19,15 +19,15 @@ const infoProyectosCard = [
   },
   {
     srcImg: "assets/images/parkingZone.svg",
-    descripcion: "Gestíon de parqueaderos del grupo Éxito"
+    descripcion: "Gestión de parqueaderos del grupo Éxito"
   },
   {
     srcImg: "assets/images/spartanBox.svg",
-    descripcion: "Gestíon del gimnasio Spartan Box"
+    descripcion: "Gestión del gimnasio Spartan Box"
   },
   {
     srcImg: "assets/images/manageSoft.svg",
-    descripcion: "Gestíon del gimnasio Spartan Box"
+    descripcion: "Gestión del gimnasio Spartan Box"
   }
 ];
 
@@ -80,7 +80,7 @@ iconoMenu.addEventListener("mouseleave", () => {
 });
 
 
-// Hover sobre las opciones
+// Hover sobre las opciones del menu
 opcionesMenu.forEach((e) => {
   e.addEventListener("mouseenter", () => {
     cursorHoverActivado();
@@ -113,13 +113,20 @@ nuestrosProyectos.forEach((e, index) => {
 });
 
 
+// Hover sobre el boton de cerrar informacion del proyecto
+btnClose.addEventListener("mouseenter", () => {
+  tooltipActivado("Cerrar");
+});
+
+btnClose.addEventListener("mouseleave", () => {
+  tooltipDesactivado();
+});
+
 
 function cursorHoverActivado() {
   cursor.classList.add("active");
   cursorDot.classList.add("active");
   cursorInner.classList.add("active");
-  tooltipDescripcion.innerText = "";
-  tooltipDescripcion.innerText = `${descripcion}`;
 }
 
 function cursorHoverDesactivado() {

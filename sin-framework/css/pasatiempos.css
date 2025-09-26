@@ -103,7 +103,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
+    z-index: 10;
 }
 
 .carrusel label:hover {
@@ -177,10 +177,12 @@ section {
     gap: 2rem;
 }
 
-.about-img {
+.pasatiempo-img {
     width: 40%;
     height: 100%;
-    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-info {

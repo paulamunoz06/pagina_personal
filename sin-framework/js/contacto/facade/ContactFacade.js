@@ -1,4 +1,6 @@
-class ContactFacade {
+import { ContactRepository } from '../repository/ContactRepository.js';
+
+export class ContactFacade {
     // Inyección de la dependencia del repositorio
     constructor() {
         this.repository = new ContactRepository();
@@ -6,9 +8,13 @@ class ContactFacade {
 
     // Guardar un nuevo contacto
     guardarContacto(id, nombre, email, telefono, motivo, mensaje, aceptaTerminos, preferenciaContacto) {
-        const contact = { id, nombre, email, telefono, motivo, mensaje, aceptaTerminos, preferenciaContacto, fechaCreacion: new Date(), fechaActualizacion: new Date() };
-        this.repository.add(contact);
-        return contact;
+        let contact = this.repository.getById(id);
+        if (!contact) {
+            contact = { id, nombre, email, telefono, motivo, mensaje, aceptaTerminos, preferenciaContacto, fechaCreacion: new Date(), fechaActualizacion: new Date() };
+            this.repository.add(contact);
+            return true;
+        }
+        return false;
     }
 
     // Consultar todos los contactos
@@ -17,8 +23,13 @@ class ContactFacade {
     }
 
     // Eliminar un contacto por su ID
-    eliminarContacto(id) {
-        this.repository.remove(id);
+    borrarContacto(id) {
+        const contact = this.repository.getById(id);
+        if (contact) {
+            this.repository.remove(id);
+            return true;
+        }
+        return false;
     }
 
     // Eliminar todos los contactos

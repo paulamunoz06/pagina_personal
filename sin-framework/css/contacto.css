@@ -95,7 +95,6 @@ section {
 
 .form-container-item {
     display: flex;
-    gap: 20px;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
@@ -174,16 +173,6 @@ select:focus {
     outline: none;
 }
 
-.is-valid {
-    border: 2px solid #28a745;
-    background-color: #ebfff0;
-}
-
-.is-invalid {
-    border: 2px solid #dc3545;
-    background-color: #fff5f5;
-}
-
 .container-boton {
     position: absolute;
     margin-top: 1rem;
@@ -211,10 +200,25 @@ select:focus {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 20px solid rgb(255, 251, 238);
+    cursor: pointer !important;
 }
 
 #btnRegistrar:hover {
     transform: scale(1.2);
+}
+
+.form-container-item input.is-valid {
+    border: 2px solid #28a745;
+    background-color: #ebfff0;
+}
+
+.form-container-item input.is-invalid {
+    border: 2px solid #dc3545;
+    background-color: #fff5f5;
+}
+
+.text-error{ 
+    color: rgb(220, 53, 69);
 }
 
 .tabla-contact {
@@ -245,6 +249,12 @@ select:focus {
     border-right-color: rgb(29, 29, 29);
 }
 
+.btn-eliminarTodos {
+    display: flex;
+    justify-content: end;
+    margin-top: 1.5rem;
+}
+
 .btn {
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
@@ -262,4 +272,8 @@ select:focus {
 .btn-eliminar {
     color: rgb(255, 251, 238);
     background-color: #dc3545;
+}
+
+.btn-eliminarTodos .btn-eliminar {
+    margin: 0;
 }

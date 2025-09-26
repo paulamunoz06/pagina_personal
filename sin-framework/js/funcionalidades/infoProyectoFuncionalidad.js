@@ -10,12 +10,12 @@ const campoTecnologias = document.querySelector('.proyecto-tecnologias');
 const infoProyectos = [
     {
         nombre: "Portafolio",
-        descripcion: "Descripcion portafolio dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
+        descripcion: "Se desarrolló un portafolio web como proyecto personal con el propósito de demostrar conocimientos en tecnologías web, exhibir proyectos realizados y generar visibilidad dentro de la industria.",
         tecnologias: ["HTML", "CSS", "JavaScript", "Bootstrap"]
     },
     {
         nombre: "Parking Zone",
-        descripcion: "Descripcion parking zone dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
+        descripcion: "Se desarrolló un aplicativo web para optimizar la gestión de los parqueaderos del Grupo Éxito.",
         tecnologias: ["HTML", "CSS", "JavaScript", "Tailwind", "Node", "Express"]
     },
     {
@@ -25,11 +25,10 @@ const infoProyectos = [
     },
     {
         nombre: "Manage Soft",
-        descripcion: "Descripcion manage soft dolor sit amet consectetur adipisicing elit. At inventore, eveniet tenetur quam sapiente quas dolorem repellat eligendi optio necessitatibus hic, obcaecati veniam in autem. Unde rerum est autem omnis?",
+        descripcion: "Se desarrolló un aplicativo de escritorio para una universidad con el objetivo de agilizar el proceso de inscripción a pasantías por parte de los estudiantes y brindar a los coordinadores de cada facultad herramientas para gestionar de manera eficiente las solicitudes.",
         tecnologias: ["Java", "Spring Boot", "Docker", "MySql", "RabbitMQ", "KeyCloak"]
     }
 ];
-
 
 proyectos.forEach((proyecto, index) => {
     proyecto.addEventListener("click", () => {

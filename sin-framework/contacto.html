@@ -20,7 +20,13 @@
     <div class="background"></div>
     <div class="cursor-dot"></div>
     <div class="cursor border"></div>
-    <div class="cursor-inner"></div>
+    <div class="cursor-inner">
+        <div class="tooltip"><span class="tooltip-descripcion"></span></div>
+        <div class="tooltip image">
+            <img src="">
+            <span class="tooltip-descripcion"></span>
+        </div>
+    </div>
     <header>
         <div id="logo">
             <p>LOGO</p>
@@ -86,28 +92,28 @@
                                     <label for="id-contacto" class="form-label">Identificación</label>
                                     <input type="text" id="id-contacto" name="id-contacto" class="form-control"
                                         placeholder="...">
-                                    <label class="text-danger form-text" id="errorIdContacto"></label>
+                                    <label class="text-error form-text" id="errorIdContacto"></label>
                                 </div>
 
                                 <div class="form-container-item">
                                     <label for="nombres" class="form-label">Nombres</label>
                                     <input type="text" id="nombres" name="nombres" class="form-control"
                                         placeholder="...">
-                                    <label class="text-danger form-text" id="errorNombres"></label>
+                                    <label class="text-error form-text" id="errorNombres"></label>
                                 </div>
 
                                 <div class="form-container-item">
                                     <label for="correo-electronico" class="form-label">Correo Electrónico</label>
                                     <input type="email" id="correo-electronico" name="correo-electronico"
                                         class="form-control" placeholder="correo@ejemplo.com">
-                                    <label class="text-danger form-text" id="errorCorreo"></label>
+                                    <label class="text-error form-text" id="errorCorreo"></label>
                                 </div>
 
                                 <div class="form-container-item">
                                     <label for="telefono" class="form-label">Telefono</label>
                                     <input type="tel" id="telefono" name="telefono" class="form-control"
                                         placeholder="...">
-                                    <label class="text-danger form-text" id="errorTelefono"></label>
+                                    <label class="text-error form-text" id="errorTelefono"></label>
                                 </div>
 
                                 <div class="form-container-item form-select-motivo">
@@ -117,14 +123,14 @@
                                         <option value="consulta">Consulta general</option>
                                         <option value="sugerencia">Sugerencia</option>
                                     </select>
-                                    <label class="text-danger form-text" id="errorMotivoContacto"></label>
+                                    <label class="text-error form-text" id="errorMotivoContacto"></label>
                                 </div>
 
                                 <div class="form-container-item form-textarea">
                                     <label for="mensaje" class="form-label">Mensaje</label>
                                     <textarea id="mensaje" name="mensaje" class="form-control"
                                         placeholder="..."></textarea>
-                                    <label class="text-danger form-text" id="errorMensaje"></label>
+                                    <label class="text-error form-text" id="errorMensaje"></label>
                                 </div>
 
                                 <div class="form-radio">
@@ -143,13 +149,13 @@
                                             </div>
                                         </div>
                                     </fieldset>
-                                    <label class="text-danger form-text" id="errorPreferenciaContacto"></label>
+                                    <label class="text-error form-text" id="errorPreferenciaContacto"></label>
                                 </div>
 
                                 <div class="form-checkbox">
                                     <input type="checkbox" id="acepta-terminos" name="acepta-terminos">
                                     <label for="acepta-terminos">Acepto los términos y condiciones</label>
-                                    <label class="text-danger form-text" id="errorAceptaTerminos"></label>
+                                    <label class="text-error form-text" id="errorAceptaTerminos"></label>
                                 </div>
                             </div>
                         </form>
@@ -173,7 +179,7 @@
                             </div>
                             <div class="header-divider"></div>
                         </div>
-                        <table class="tabla-contact">
+                        <table class="tabla-contact" id="tablaContactos">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -189,23 +195,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>juan</td>
-                                    <td>juanperezdz@gmail.com</td>
-                                    <td>3164171685</td>
-                                    <td>soporte técnico</td>
-                                    <td>tuve un problema muy grave con mi computador</td>
-                                    <td>teléfono</td>
-                                    <td>05/07/20205</td>
-                                    <td>25/09/20205</td>
-                                    <td>
-                                        <button class="btn btn-editar">Editar</button>
-                                        <button class="btn btn-eliminar">Eliminar</button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="btn-eliminarTodos">
+                        <button class="btn btn-eliminar" onclick="eliminarTodos()">Eliminar Todos</button>
                     </div>
                 </div>
             </div>
@@ -214,6 +208,8 @@
     <script src="js/animaciones/cursorAnimacion.js"></script>
     <script src="js/funcionalidades/menuFuncionalidad.js"></script>
     <script src="js/funcionalidades/textAreaDinamica.js"></script>
+    <script type="module" src="js/funcionalidades/validaciones.js"></script>
+    <script type="module" src="js/contacto/facade/ContactFacade.js"></script>
 </body>
 
 </html>

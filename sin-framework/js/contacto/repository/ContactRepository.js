@@ -1,4 +1,4 @@
-class ContactRepository {
+export class ContactRepository {
     // Clave para almacenar los datos en localStorage
     constructor(storageKey = "contacts") {
         this.storageKey = storageKey;
@@ -30,7 +30,6 @@ class ContactRepository {
     getById(id) {
         // Cargar los contactos existentes
         let contacts = this._load();
-
         // Buscar el contacto con el ID especificado
         return contacts.find(contact => contact.id === id) || null;
     }
@@ -39,10 +38,8 @@ class ContactRepository {
     add(contact) {
         // Cargar los contactos existentes
         let contacts = this._load();
-
         // Agregar el nuevo contacto al arreglo
         contacts.push(contact);
-
         // Guardar el arreglo actualizado en localStorage
         this._save(contacts);
     }
@@ -65,10 +62,8 @@ class ContactRepository {
     remove(id) {
         // Cargar los contactos existentes
         let contacts = this._load();
-
         // Filtrar los contactos que no coinciden con el ID
         contacts = contacts.filter(contact => contact.id !== id);
-
         // Guardar el arreglo actualizado en localStorage
         this._save(contacts);
     }
